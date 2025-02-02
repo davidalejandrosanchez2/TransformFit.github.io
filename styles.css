@@ -1,0 +1,427 @@
+/* -------------------- RESET GENERAL ----------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -------------------- ESTILOS GENERALES ----------------------------------------------------------*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  line-height: 1.5;
+  min-height: 100vh;
+  font-size: 16px; /* Tamaño base */
+}
+
+
+/* -------------------- ESTILOS DEL HEADER ----------------------------------------------------------*/
+
+header {
+  display: flex; /* Utiliza flexbox para el diseño del contenedor */ 
+  align-items: center; /* Centrar verticalmente el contenido */ 
+  justify-content: space-between; /* Espacio entre el logo y la navegación */ 
+  padding: 0 20px; /* Espaciado interno a los lados */ 
+  background-color: #000; /* Fondo del menú */ 
+  height: 80px; /* Altura fija del menú */ 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+  position: relative; /* Posicionamiento relativo */
+  border-bottom: 2px solid #444;
+
+}
+
+
+header .logo { 
+  font-size: 24px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  color: #ffffff; /* Color blanco */
+} 
+
+header nav ul { 
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el relleno */
+  margin: 0; /* Elimina el margen */
+  display: flex; /* Utiliza flexbox para el diseño del contenedor */
+  gap: 20px; /* Espaciado entre los elementos de la lista */
+} 
+
+header nav ul li {
+   display: inline; /* Muestra los elementos en línea */
+} 
+
+header nav ul li a { 
+  text-decoration: none; /* Elimina el subrayado */
+  color: #ffffff; /* Color del texto blanco */
+  padding: 10px 15px; /* Relleno interno */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Transición suave del color de fondo */
+} 
+
+header nav ul li a:hover { 
+  background-color: #333333; /* Color de fondo al pasar el cursor */
+} 
+
+header nav ul li a.boton { 
+  background-color: #007bff; /* Color de fondo azul */
+  color: #ffffff; /* Color del texto blanco */
+  font-weight: bold; /* Texto en negrita */
+} 
+
+header nav ul li a.boton:hover { 
+  background-color: #0056b3; /* Color de fondo al pasar el cursor */
+}
+
+header nav ul li a.boton.disabled { 
+  background-color: #6c757d; /* Color de fondo gris para el botón deshabilitado */
+  cursor: not-allowed; /* Cursor de no permitido */
+} 
+
+
+header .nav-left,
+header .nav-right {
+  display: flex;
+  gap: 15px;
+}
+
+ .nav-right ul { 
+  display: flex; /* Utiliza flexbox para el diseño del contenedor */ 
+  gap: 20px; /* Espaciado entre los elementos */ 
+  list-style: none; /* Elimina los puntos de la lista */ 
+  padding: 0; /* Elimina el relleno */ 
+  margin: 0; /* Elimina el margen */ 
+}
+
+/* Estilo del contenedor del logo */
+.logo-container { 
+  position: absolute; /* Posiciona el contenedor del logo */ 
+  left: 50%; /* Mueve el contenedor a la mitad del contenedor padre */ 
+  transform: translateX(-50%); /* Ajusta la posición del logo para que quede centrado */ 
+}
+
+
+
+/* Estilo para la imagen del logo */
+.logo {
+  height: 100%; /* Ajusta la altura del logo al tamaño del contenedor */
+  max-height: 80px; /* Asegúrate de que no supere la altura del menú */
+  width: auto; /* Mantén las proporciones del logo */
+}
+
+
+/* -------------------- SECCIÓN DE BIENVENIDA ----------------------------------------------------------*/
+
+.bienvenida {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #1e1e1e, #121212);
+}
+
+.bienvenida h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.bienvenida p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+
+/* -------------------- SECCIÓN CATEGORÍAS ----------------------------------------------------------*/
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+
+.categoria { 
+  background-color: #1f1f1f; /* Color de fondo */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta contenido que desborde */
+  text-align: center; /* Texto centrado */
+  width: 300px; /* Ancho fijo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+  transition: transform 0.3s; /* Transición suave de transformación */
+  border: 1px solid #333;
+} 
+
+.categoria:hover { 
+  transform: translateY(-10px); /* Desplaza el elemento hacia arriba al pasar el cursor */
+} 
+
+.categoria img { 
+  width: 100%; /* Ancho completo */
+  height: 200px; /* Altura fija */
+  object-fit: cover; /* Escala la imagen para que cubra el área */
+} 
+
+.categoria h2 {
+  margin: 10px 0;
+}
+
+
+.categoria p {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+
+.categoria a {
+  text-decoration: none; /* Elimina el subrayado */
+  font-weight: bold; /* Texto en negrita */
+  color: #007bff; /* Color azul del texto */
+  margin-bottom: 15px; /* Margen inferior */
+  display: inline-block; /* Elemento en línea y en bloque */
+  transition: color 0.3s; /* Transición suave del color del texto */
+  font-weight: bold;
+
+} 
+
+.categoria a:hover { 
+  color: #0056b3; /* Color azul oscuro al pasar el cursor */
+} 
+
+/* -------------------- SECCIÓN FORMULARIO ----------------------------------------------------------*/
+
+.form-container {
+  max-width: 400px; /* Ancho máximo del contenedor */
+  margin: 50px auto; /* Margen superior e inferior y centrado automático */
+  padding: 20px; /* Relleno interno */
+  background-color: #1f1f1f; /* Color de fondo */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+} 
+
+.form-container h1 { 
+  font-size: 28px; /* Tamaño del texto del encabezado */
+  text-align: center; /* Texto centrado */
+  margin-bottom: 20px; /* Margen inferior */
+} 
+
+form label {
+  display: block; /* Elemento en bloque */
+  margin-bottom: 5px; /* Margen inferior */
+  font-weight: bold; /* Texto en negrita */
+} 
+
+form input { 
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Relleno interno */
+  margin-bottom: 15px; /* Margen inferior */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #333333; /* Color de fondo gris oscuro */
+  color: #ffffff; /* Color del texto blanco */
+} 
+
+form button { 
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Relleno interno */
+  background-color: #007bff; /* Color de fondo azul */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  color: #ffffff; /* Color del texto blanco */
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Cursor de puntero */
+  transition: background-color 0.3s; /* Transición suave del color de fondo */
+} 
+
+form button:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el cursor */
+} 
+
+/* -----------------------------Footer ----------------------------------------------------------*/
+footer { 
+  text-align: center; /* Texto centrado */
+  padding: 20px; /* Relleno interno */
+  background-color: #000000; /* Color de fondo negro */
+  color: #ffffff; /* Color del texto blanco */
+  font-size: 14px; /* Tamaño del texto */
+  border-top: 2px solid #444;
+} 
+
+/* -------------------- PREGUNTAS DESPLEGABLES ----------------------------------------------------------*/ 
+
+
+.pregunta .desplegable  {
+  margin: 20px; /* Margen */
+  display: block; /* Hace que el elemento sea un bloque */
+  margin: 0 auto; /* Centrado horizontal automático */
+  text-align: center; /* Centra el texto */
+  background-color: #25d366; /* Establece el color de fondo verde */
+  color: white; /* Color del texto blanco */
+  font-size: 18px; /* Tamaño de la fuente */
+  padding: 10px 20px; /* Espaciado interno: 10px arriba/abajo y 20px izquierda/derecha */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a puntero cuando se pasa por encima */
+  transition: background-color 0.3s ease; /* Transición suave para cambios de color de fondo */
+
+}
+
+.pregunta .desplegable:hover {
+  background-color: #00ff2a;
+}
+
+
+.contenido-desplegable {
+  display: none; /* Oculta el contenido inicialmente */
+  margin: 20px auto; /* Margen superior e inferior y centrado automático */
+  text-align: center; /* Texto centrado */
+  width: 450px; /* Ancho fijo */
+  background-color: #1f1f1f; /* Color de fondo */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta contenido que desborde */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+  transition: transform 0.3s; /* Transición suave de transformación */
+} 
+
+.contenido-desplegable {
+  text-align: left; /* Texto alineado a la izquierda */
+  padding: 10px; /* Relleno interno */
+}
+
+.contenido { 
+  background-color: #1f1f1f; /* Color de fondo */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta contenido que desborde */
+  text-align: center; /* Texto centrado */
+  width: auto; /* Ancho automático */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+} 
+
+.contenido img { 
+  width: 100%; /* Ancho completo */
+  object-fit: cover; /* Escala la imagen para que cubra el área */
+} 
+
+/* -------------------- CONTENIDOS DESPLEGABLES ----------------------------------------------------------*/ 
+/* Contenido desplegable */
+section .contenido-calistenia,
+section .contenido-EnCasa,
+section .contenido-Gimnasio {
+  display: none;
+  padding: 10px 20px;
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+/*--------------CALISTENIA , EN CASA , GIMNASIO--------------*/
+/* Contenedor general de la sección */
+.calistenia-info,
+.EnCasa-info,
+.Gimnasio-info {
+  display: flex; /* Utiliza flexbox para el diseño del contenedor */
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  margin: 20px auto; /* Margen superior e inferior y centrado automático */
+  max-width: 600px; /* Tamaño máximo del contenedor */
+  text-align: center; /* Texto centrado */
+  border: 1px solid #ddd; /* Borde sólido */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #ffffff; /* Color de fondo blanco */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+  overflow: hidden; /* Oculta contenido que desborde */
+}
+
+/* Botón desplegable */
+.desplegable-calistenia,
+.desplegable-EnCasa,
+.desplegable-Gimnasio {
+  background-color: #f5f5f5; /* Color de fondo */
+  color: #333; /* Color del texto */
+  font-size: 18px; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor de puntero */
+  padding: 15px; /* Relleno interno */
+  width: 100%; /* Ancho completo */
+  text-align: left; /* Texto alineado a la izquierda */
+  display: flex; /* Utiliza flexbox para el diseño del contenedor */
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.desplegable-calistenia:hover,
+.desplegable-EnCasa:hover,
+.desplegable-Gimnasio:hover {
+  background-color: #e4b5b5; /* Color de fondo al pasar el cursor */
+}
+
+/* Icono para el botón */
+.icono-calistenia,
+.icono-EnCasa,
+.icono-Gimnasio {
+  font-size: 20px; /* Tamaño del icono */
+}
+
+/*------------------------------------------WHATSAPP--------------------------------------------------------------------------*/
+
+/*ICONO whatsapp*/
+.whatsapp-btn {
+  position: fixed; /* Posición fija en la pantalla */
+  bottom: 20px; /* A 20px del borde inferior */
+  right: 20px; /* A 20px del borde derecho */
+  width: 60px; /* Ancho de 60px */
+  height: 60px; /* Altura de 60px */
+  background-color: #25d366; /* Color de fondo verde de WhatsApp */
+  border-radius: 50%; /* Bordes redondeados para hacer un círculo */
+  display: flex; /* Utiliza flexbox para centrar el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para transformaciones y sombras */
+}
+
+.whatsapp-btn img {
+  width: 35px; /* Ancho de la imagen del icono de WhatsApp */
+  height: 35px; /* Altura de la imagen del icono de WhatsApp */
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el cursor */
+}
+
+/* -------------------- MEDIA QUERIES --------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  header ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .categorias {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .categoria {
+      width: 90%;
+  }
+
+  .bienvenida h1 {
+      font-size: 1.5rem;
+  }
+
+  .bienvenida p {
+      font-size: 0.9rem;
+  }
+
+  footer {
+      font-size: 0.8rem;
+  }
+}
